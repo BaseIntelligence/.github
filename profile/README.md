@@ -40,26 +40,23 @@ The core difference: closed labs are limited to a **handful of salaried employee
 | **Transparency** | Black box | Every contribution is public code |
 
 ```mermaid
-flowchart TB
-    subgraph CLOSED["Closed Labs - OpenAI, Anthropic"]
+%%{init: {'flowchart': {'nodeSpacing': 25, 'rankSpacing': 55}}}%%
+flowchart LR
+    subgraph CLOSED["Closed Labs: OpenAI, Anthropic"]
         direction TB
         C0["A few hundred salaried employees"]
         C1["Compete only inside the company"]
-        C2["No external contributors"]
-        C3["Fixed pay, no merit incentive"]
-        C0 --> C1 --> C2 --> C3
+        C2["Fixed pay, no merit incentive"]
+        C0 --> C1 --> C2
     end
-
-    subgraph BASE["BASE - Open and Decentralized"]
+    subgraph BASE["BASE: Open and Decentralized"]
         direction TB
         B0["Anyone on Earth can join"]
         B1["Worldwide open competition"]
-        B2["Thousands of miners contribute"]
-        B3["On-chain rewards for the best work"]
-        B0 --> B1 --> B2 --> B3
+        B2["On-chain rewards for the best work"]
+        B0 --> B1 --> B2
     end
-
-    CLOSED -. "closed doors vs the whole world" .-> BASE
+    CLOSED -- "closed doors vs the whole world" --> BASE
 
     style CLOSED fill:#1f1f2e,stroke:#555,color:#ddd
     style BASE fill:#2a1a4a,stroke:#7c3aed,color:#fff
@@ -96,15 +93,16 @@ Community-driven bug discovery and software improvement, with rewards based on i
 ## How it works
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 70}}}%%
 flowchart LR
-    V["Validators<br/>issue challenges<br/>and score work"]
-    M["Miners<br/>compete and contribute<br/>code, data, models"]
-    BT["Bittensor<br/>merit-based rewards<br/>weights set on-chain"]
+    V["Validators<br/>issue and score"]
+    M["Miners<br/>compete and contribute"]
+    BT["Bittensor<br/>on-chain rewards"]
 
-    V -- "challenge" --> M
-    M -- "contributions" --> V
-    V -- "set weights" --> BT
-    BT -- "TAO rewards" --> M
+    V -- challenge --> M
+    M -- contributions --> V
+    V -- weights --> BT
+    BT -- TAO --> M
 
     style V fill:#0e7490,stroke:#06b6d4,color:#fff
     style M fill:#4c1d95,stroke:#7c3aed,color:#fff
@@ -121,14 +119,15 @@ flowchart LR
 ## The pipeline, end to end
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 55}}}%%
 flowchart LR
-    P["Prism<br/><i>Research</i><br/>find better architectures"]
-    R["Relay<br/><i>Data</i><br/>crawl the freshest web data"]
-    D["Data Fabrication<br/><i>Refine</i><br/>training-ready datasets"]
-    T["Trained Models<br/><i>Open and owned by the network</i>"]
+    P["Prism<br/>Research"]
+    R["Relay<br/>Crawl fresh data"]
+    D["Data Fabrication<br/>Datasets"]
+    T["Trained Models<br/>Open"]
 
     P --> R --> D --> T
-    T -. "insights feed back" .-> P
+    T -. insights .-> P
 
     style P fill:#4c1d95,stroke:#a78bfa,color:#fff
     style R fill:#0e7490,stroke:#22d3ee,color:#fff
