@@ -39,28 +39,14 @@ The core difference: closed labs are limited to a **handful of salaried employee
 | **Data** | Proprietary pipelines | Decentralized, continuously crawled |
 | **Transparency** | Black box | Every contribution is public code |
 
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 25, 'rankSpacing': 55}}}%%
-flowchart LR
-    subgraph CLOSED["Closed Labs: OpenAI, Anthropic"]
-        direction TB
-        C0["A few hundred salaried employees"]
-        C1["Compete only inside the company"]
-        C2["Fixed pay, no merit incentive"]
-        C0 --> C1 --> C2
-    end
-    subgraph BASE["BASE: Open and Decentralized"]
-        direction TB
-        B0["Anyone on Earth can join"]
-        B1["Worldwide open competition"]
-        B2["On-chain rewards for the best work"]
-        B0 --> B1 --> B2
-    end
-    CLOSED -- "closed doors vs the whole world" --> BASE
+<div align="center">
 
-    style CLOSED fill:#1f1f2e,stroke:#555,color:#ddd
-    style BASE fill:#2a1a4a,stroke:#7c3aed,color:#fff
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/cmp-dark.svg">
+  <img alt="Base vs closed labs" src="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/cmp-light.svg" width="680">
+</picture>
+
+</div>
 
 Base is not one model. It is the **machinery that produces models**, opened up to everyone.
 
@@ -92,22 +78,14 @@ Community-driven bug discovery and software improvement, with rewards based on i
 
 ## How it works
 
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 70}}}%%
-flowchart LR
-    V["Validators<br/>issue and score"]
-    M["Miners<br/>compete and contribute"]
-    BT["Bittensor<br/>on-chain rewards"]
+<div align="center">
 
-    V -- challenge --> M
-    M -- contributions --> V
-    V -- weights --> BT
-    BT -- TAO --> M
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/hiw-dark.svg">
+  <img alt="How Base works" src="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/hiw-light.svg" width="620">
+</picture>
 
-    style V fill:#0e7490,stroke:#06b6d4,color:#fff
-    style M fill:#4c1d95,stroke:#7c3aed,color:#fff
-    style BT fill:#1e3a8a,stroke:#3b82f6,color:#fff
-```
+</div>
 
 1. **A challenge is issued** - research, crawl, dataset, or agent task.
 2. **Miners compete** - they contribute real code, crawled data, or model improvements.
@@ -118,22 +96,14 @@ flowchart LR
 
 ## The pipeline, end to end
 
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 30, 'rankSpacing': 55}}}%%
-flowchart LR
-    P["Prism<br/>Research"]
-    R["Relay<br/>Crawl fresh data"]
-    D["Data Fabrication<br/>Datasets"]
-    T["Trained Models<br/>Open"]
+<div align="center">
 
-    P --> R --> D --> T
-    T -. insights .-> P
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/pipe-dark.svg">
+  <img alt="Base pipeline" src="https://raw.githubusercontent.com/BaseIntelligence/.github/main/profile/assets/pipe-light.svg" width="640">
+</picture>
 
-    style P fill:#4c1d95,stroke:#a78bfa,color:#fff
-    style R fill:#0e7490,stroke:#22d3ee,color:#fff
-    style D fill:#92400e,stroke:#f59e0b,color:#fff
-    style T fill:#166534,stroke:#22c55e,color:#fff
-```
+</div>
 
 **Prism** discovers *how* to build better models, **Relay** crawls the web for the *most recent* data, **Data Fabrication** turns it into training-ready datasets, and the network trains and improves, in the open.
 
